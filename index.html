@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Generator</title>
+    <style>
+        #output {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputBox" placeholder="Type your code here">
+    <div id="output"></div>
+    <script>
+        const inputBox = document.getElementById('inputBox');
+        const output = document.getElementById('output');
+        inputBox.addEventListener('input', function() {
+            if (inputBox.value === 'CDT') {
+                output.textContent = 'You’ve unlocked the phrase!';
+            } else {
+                output.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>
